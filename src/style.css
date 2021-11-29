@@ -1,0 +1,90 @@
+.container {
+  margin-top: 50px;
+  font-family: "Pangolin", cursive;
+  max-width: 800px;
+}
+.full-body-card {
+  display: block;
+  position: relative;
+  border: 1px solid rgba(255, 207, 127, 1);
+}
+
+.head-emoji {
+  display: block;
+  font-size: 64px;
+  text-align: center;
+  color: #ffcf7f;
+}
+.head-temperature {
+  font-size: 80px;
+  color: #89c4ff;
+  text-align: center;
+  margin: 0 auto;
+}
+h3 {
+  text-align: center;
+  color: #ff9090;
+  margin-top: 10px;
+}
+.today,
+.head-location {
+  font-size: 18px;
+}
+form {
+  text-align: center;
+  margin-top: 35px;
+}
+input {
+  color: #89c4ff;
+  border: 1px solid #89c4ff;
+  border-radius: 4px;
+  padding: 10px;
+}
+input[type="text"]:focus {
+  outline: 2px solid #89c4ff;
+}
+::placeholder {
+  color: #89c4ff;
+}
+button {
+  background-color: #ffffff;
+  border-style: none;
+  color: #89c4ff;
+  display: table;
+  margin: auto;
+  padding: 20px 0px 0px;
+  text-align: center;
+}
+button:hover {
+  text-decoration: underline;
+}
+.celcius {
+  display: block;
+  text-align: center;
+}
+.weekday-card {
+  border: 2px solid rgba(255, 207, 127, 1);
+}
+.row {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+h6 {
+  margin-top: 10px;
+  text-align: center;
+}
+.weekday {
+  font-size: 14px;
+  color: #ff9090;
+}
+.body-temperature {
+  text-align: center;
+  font-size: 24px;
+  color: #89c4ff;
+}
+.weekday-emoji {
+  font-size: 18px;
+  text-align: center;
+  color: #ffcf7f;
+}

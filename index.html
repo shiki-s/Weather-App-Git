@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+        <link rel="stylesheet" href="src/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <title>Weather App Wireframe</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card full-body-card">
+        <div class="card-body">
+          <div class="head-emoji">☀</div>
+          <h1 class="head-temperature"></h1>
+          <h3 class="today" id="today">Today</h3>
+
+          <h3 class="head-location" id="location">Sydney, Australia</h3>
+          <form id="location-form">
+            <input type="text" id="location-form-input" placeholder="Where do you want to go?"/>
+          </form>
+
+          <button id="current-location-button">
+            Current Location
+          </button>
+          
+
+          <div class="row">
+            <div class="col">
+              <div class="card weekday-card">
+                <div class="card-body">
+                  <h6 class="weekday">Mon</h6>
+                  <p class="body-temperature">
+                    22°<div class="weekday-emoji">☀</div>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card weekday-card">
+                <div class="card-body">
+                  <h6 class="weekday">Tue</h6>
+                  <p class="body-temperature">
+                    26° <div class="weekday-emoji">🌤</div>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card weekday-card">
+                <div class="card-body">
+                  <h6 class="weekday">Wed</h6>
+                  <p class="body-temperature">
+                    28°
+                    <div class="weekday-emoji">⛅</div>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card weekday-card">
+                <div class="card-body">
+                  <h6 class="weekday">Thur</h6>
+                  <p class="body-temperature">
+                    26°<div class="weekday-emoji">☀</div>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card weekday-card">
+                <div class="card-body">
+                  <h6 class="weekday">Fri</h6>
+                  <p class="body-temperature">
+                    27°<div class="weekday-emoji">☀</div>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+      <script src="src/script.js"></script>
+
+</html>
