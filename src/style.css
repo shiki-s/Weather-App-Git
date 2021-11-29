@@ -90,4 +90,5 @@ h6 {
 }
 .open-source-disclaimer {
   text-align: center;
+  display: block;
 }
