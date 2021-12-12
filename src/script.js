@@ -24,9 +24,9 @@ function showTime() {
   dateDisplay.innerHTML = date;
 }
 function displayWeather(response) {
-  let temp = Math.round(response.data.main.temp);
+  let celciusTemperature = Math.round(response.data.main.temp);
   let headTemp = document.querySelector(".head-temperature");
-  headTemp.innerHTML = temp;
+  headTemp.innerHTML = celciusTemperature;
 }
 
 function showDefaultTemp() {
@@ -69,16 +69,21 @@ function locationSearch(event) {
 }
 
 function showFahrenheit(event) {
-  let temperature = .head-temperature
+  event.preventDefault();
+  let fahrenheitTempertature = (celciusTemperature * 9) / 5 + 32;
+  alert(fahrenheitTempertature);
 }
 
-let search = document.querySelector("#location-form");
-search.addEventListener("submit", locationSearch);
+let celciusTemperature = null;
+
+let currentLocationButton = document.getElementById("current-location-button");
+currentLocationButton.addEventListener("click", currentLocationClick);
 
 let fahrenheitButton = document.querySelector("#fahrenheit");
 fahrenheitButton.addEventListener("click", showFahrenheit);
 
-let currentLocationButton = document.getElementById("current-location-button");
-currentLocationButton.addEventListener("click", currentLocationClick);
+let search = document.querySelector("#location-form");
+search.addEventListener("submit", locationSearch);
+
 showTime();
 showDefaultTemp();
