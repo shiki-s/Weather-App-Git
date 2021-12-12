@@ -40,6 +40,9 @@ a:hover {
    text-decoration: underline;
    color: #89c4ff;
 }
+p {
+  color: #89c4ff;
+}
 h3 {
   text-align: center;
   color: #ff9090;
