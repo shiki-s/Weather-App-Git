@@ -29,6 +29,14 @@ function displayWeather(response) {
   headTemp.innerHTML = temp;
 }
 
+function showDefaultTemp() {
+  let apiKey = "ba73db419b4c99c0a6fa92bf9033b20d";
+  let apiRoot = "https://api.openweathermap.org/data/2.5/weather";
+  let units = "metric";
+  let apiUrl = `${apiRoot}?q=Tokyo&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayWeather);
+}
+
 function currentLocationTemp(position) {
   console.log(position);
   let lat = position.coords.latitude;
@@ -60,12 +68,17 @@ function locationSearch(event) {
   axios.get(apiUrl).then(displayWeather);
 }
 
+function showFahrenheit(event) {
+  let temperature = .head-temperature
+}
+
 let search = document.querySelector("#location-form");
 search.addEventListener("submit", locationSearch);
 
 let fahrenheitButton = document.querySelector("#fahrenheit");
-fahrenheitButton.addEventListener("click");
+fahrenheitButton.addEventListener("click", showFahrenheit);
 
 let currentLocationButton = document.getElementById("current-location-button");
 currentLocationButton.addEventListener("click", currentLocationClick);
 showTime();
+showDefaultTemp();

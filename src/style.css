@@ -28,16 +28,14 @@
 }
 .unit-button-container {
  display: block;
-}
-.unit {
-  color: #ffcf7f;
+ color: #ffcf7f;
   font-size: 16px;
-  line-height: 24px;
-  margin-top: 6px;
-  padding-left: 6px;
-  vertical-align: top;
 }
-.unit:hover {
+a.unit {
+color: #ffcf7f;
+display: inline-block;
+margin: 0 auto;}
+a:hover {
    text-decoration: underline;
    color: #89c4ff;
 }
