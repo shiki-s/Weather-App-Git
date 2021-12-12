@@ -37,6 +37,10 @@
   padding-left: 6px;
   vertical-align: top;
 }
+.unit:hover {
+   text-decoration: underline;
+   color: #89c4ff;
+}
 h3 {
   text-align: center;
   color: #ff9090;

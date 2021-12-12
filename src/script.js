@@ -63,6 +63,9 @@ function locationSearch(event) {
 let search = document.querySelector("#location-form");
 search.addEventListener("submit", locationSearch);
 
+let fahrenheitButton = document.querySelector("#fahrenheit");
+fahrenheitButton.addEventListener("click");
+
 let currentLocationButton = document.getElementById("current-location-button");
 currentLocationButton.addEventListener("click", currentLocationClick);
 showTime();
