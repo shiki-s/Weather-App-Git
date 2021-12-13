@@ -24,7 +24,7 @@ function showTime() {
   dateDisplay.innerHTML = date;
 }
 function displayWeather(response) {
-  let celciusTemperature = Math.round(response.data.main.temp);
+  celciusTemperature = Math.round(response.data.main.temp);
   let headTemp = document.querySelector(".head-temperature");
   headTemp.innerHTML = celciusTemperature;
 
