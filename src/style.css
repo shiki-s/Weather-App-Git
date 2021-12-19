@@ -33,13 +33,18 @@
   font-size: 16px;
 }
 a.unit {
-color: #ffcf7f;
+color: #d1d1d1;
 position: relative;
 display: inline-block;
 margin: 0 auto;}
-a:hover {
-   text-decoration: underline;
+a.unit:hover {
+   text-decoration: none;
    color: #89c4ff;
+   cursor: pointer;
+}
+a.unit.active {
+  text-decoration: none;
+  color: #89c4ff;
 }
 p {
   color: #89c4ff;

@@ -78,6 +78,9 @@ function locationSearch(event) {
 
 function showFahrenheit(event) {
   event.preventDefault();
+  // remove active class from Celcius link
+  celciusButton.classList.remove("active");
+  fahrenheitButton.classList.add("active");
   let headTemp = document.querySelector(".head-temperature");
   let fahrenheitTempertature = Math.round((celciusTemperature * 9) / 5 + 32);
   headTemp.innerHTML = fahrenheitTempertature;
@@ -85,6 +88,8 @@ function showFahrenheit(event) {
 
 function showCelcius(event) {
   event.preventDefault();
+  fahrenheitButton.classList.remove("active");
+  celciusButton.classList.add("active");
   showDefaultTemp();
 }
 
