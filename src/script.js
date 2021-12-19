@@ -79,8 +79,13 @@ function locationSearch(event) {
 function showFahrenheit(event) {
   event.preventDefault();
   let headTemp = document.querySelector(".head-temperature");
-  let fahrenheitTempertature = (celciusTemperature * 9) / 5 + 32;
+  let fahrenheitTempertature = Math.round((celciusTemperature * 9) / 5 + 32);
   headTemp.innerHTML = fahrenheitTempertature;
+}
+
+function showCelcius(event) {
+  event.preventDefault();
+  showDefaultTemp();
 }
 
 let celciusTemperature = null;
@@ -91,6 +96,9 @@ currentLocationButton.addEventListener("click", currentLocationClick);
 
 let fahrenheitButton = document.querySelector("#fahrenheit");
 fahrenheitButton.addEventListener("click", showFahrenheit);
+
+let celciusButton = document.querySelector("#celcius");
+celciusButton.addEventListener("click", showCelcius);
 
 let search = document.querySelector("#location-form");
 search.addEventListener("submit", locationSearch);
