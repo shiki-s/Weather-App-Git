@@ -21,13 +21,13 @@
 }
 .head-temperature {
   font-size: 80px;
-  display: inline-flex;
+  display: block;
   color: #89c4ff;
   text-align: center;
   margin left: 50% auto;
 }
 .unit-button-container {
- display: block;
+  text-align: center;
  color: #ffcf7f;
   font-size: 16px;
 }
