@@ -109,8 +109,11 @@ h6 {
 }
 .body-temperature {
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
   color: #89c4ff;
+}
+.low {
+color: #d1d1d1;
 }
 .weekday-emoji {
   font-size: 18px;
