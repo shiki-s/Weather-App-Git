@@ -37,6 +37,24 @@ function displayWeather(response) {
   windSpeedDisplay.innerHTML = `Wind speed: ${windSpeed}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector(".weatherForecast");
+  forecastHTML.innerHTML = `
+ <div class="col">
+              <div class="card weekday-card">
+                <div class="card-body">
+                  <h6 class="weekday">Mon</h6>
+                  <p class="body-temperature">
+                    <span class="high">22°</span>
+                    <span class="low">15°</span>
+        
+                    <div class="weekday-emoji">☀</div>
+                  </p>
+                </div>
+              </div>
+            </div>`;
+}
+
 function showDefaultTemp() {
   let apiKey = "ba73db419b4c99c0a6fa92bf9033b20d";
   let apiRoot = "https://api.openweathermap.org/data/2.5/weather";
@@ -109,3 +127,4 @@ let search = document.querySelector("#location-form");
 search.addEventListener("submit", locationSearch);
 
 showTime();
+displayForecast();
