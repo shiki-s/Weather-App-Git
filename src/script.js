@@ -39,7 +39,10 @@ function displayWeather(response) {
 
 function displayForecast() {
   let forecastElement = document.querySelector(".weatherForecast");
-  forecastHTML.innerHTML = `
+  let forecastHTML = "";
+  forecastElement.innerHTML =
+    forecastHTML +
+    `
  <div class="col">
               <div class="card weekday-card">
                 <div class="card-body">
