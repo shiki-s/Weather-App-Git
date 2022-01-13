@@ -40,13 +40,15 @@ function displayWeather(response) {
 function displayForecast() {
   let forecastElement = document.querySelector(".weatherForecast");
   let forecastHTML = `<div class="row">`;
-  forecastElement.innerHTML =
-    forecastHTML +
-    `
+  let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
  <div class="col">
               <div class="card weekday-card">
                 <div class="card-body">
-                  <h6 class="weekday">Mon</h6>
+                  <h6 class="weekday">${days[1]}</h6>
                   <p class="body-temperature">
                     <span class="high">22°</span>
                     <span class="low">15°</span>
@@ -56,7 +58,9 @@ function displayForecast() {
                 </div>
               </div>
             </div>`;
+  });
   forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function showDefaultTemp() {
