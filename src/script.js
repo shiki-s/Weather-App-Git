@@ -60,10 +60,11 @@ function displayForecast(response) {
   let forecastElement = document.querySelector(".weatherForecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
-  forecast.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
  <div class="col">
               <div class="card weekday-card">
                 <div class="card-body">
@@ -83,9 +84,11 @@ function displayForecast(response) {
                 </div>
               </div>
             </div>`;
+
+      forecastHTML = forecastHTML + `</div>`;
+      forecastElement.innerHTML = forecastHTML;
+    }
   });
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
 }
 
 function showDefaultTemp() {
@@ -127,34 +130,10 @@ function locationSearch(event) {
   axios.get(apiUrl).then(displayWeather);
 }
 
-function showFahrenheit(event) {
-  event.preventDefault();
-  // remove active class from Celcius link
-  celciusButton.classList.remove("active");
-  fahrenheitButton.classList.add("active");
-  let headTemp = document.querySelector(".head-temperature");
-  let fahrenheitTempertature = Math.round((celciusTemperature * 9) / 5 + 32);
-  headTemp.innerHTML = fahrenheitTempertature;
-}
-
-function showCelcius(event) {
-  event.preventDefault();
-  fahrenheitButton.classList.remove("active");
-  celciusButton.classList.add("active");
-  showDefaultTemp();
-}
-
-let celciusTemperature = null;
 showDefaultTemp();
 
 let currentLocationButton = document.getElementById("current-location-button");
 currentLocationButton.addEventListener("click", currentLocationClick);
-
-let fahrenheitButton = document.querySelector("#fahrenheit");
-fahrenheitButton.addEventListener("click", showFahrenheit);
-
-let celciusButton = document.querySelector("#celcius");
-celciusButton.addEventListener("click", showCelcius);
 
 let search = document.querySelector("#location-form");
 search.addEventListener("submit", locationSearch);
