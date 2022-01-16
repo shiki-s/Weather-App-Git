@@ -23,6 +23,14 @@ function showTime() {
   let dateDisplay = document.querySelector("#today");
   dateDisplay.innerHTML = date;
 }
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "ba73db419b4c99c0a6fa92bf9033b20d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+}
+
 function displayWeather(response) {
   celciusTemperature = Math.round(response.data.main.temp);
   let headTemp = document.querySelector(".head-temperature");
@@ -35,6 +43,8 @@ function displayWeather(response) {
   let windSpeed = response.data.wind.speed;
   let windSpeedDisplay = document.querySelector(".wind-speed");
   windSpeedDisplay.innerHTML = `Wind speed: ${windSpeed}`;
+
+  getForecast(response.data.coord);
 }
 
 function displayForecast() {
@@ -48,7 +58,7 @@ function displayForecast() {
  <div class="col">
               <div class="card weekday-card">
                 <div class="card-body">
-                  <h6 class="weekday">${days[1]}</h6>
+                  <h6 class="weekday">${day}</h6>
                   <p class="body-temperature">
                     <span class="high">22°</span>
                     <span class="low">15°</span>
