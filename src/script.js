@@ -24,6 +24,13 @@ function showTime() {
   dateDisplay.innerHTML = date;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  return days[day];
+}
+
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "ba73db419b4c99c0a6fa92bf9033b20d";
@@ -60,12 +67,18 @@ function displayForecast(response) {
  <div class="col">
               <div class="card weekday-card">
                 <div class="card-body">
-                  <h6 class="weekday">${forecastDay.dt}</h6>
+                  <h6 class="weekday">${formatDay(forecastDay.dt)}</h6>
                   <p class="body-temperature">
-                    <span class="high">${forecastDay.temp.max}°</span>
-                    <span class="low">${forecastDay.temp.min}°</span>
+                    <span class="high">${Math.round(
+                      forecastDay.temp.max
+                    )}°</span>
+                    <span class="low">${Math.round(
+                      forecastDay.temp.min
+                    )}°</span>
         
-                    <div class="weekday-emoji">${forecastDay.weather[0].icon}</div>
+                    <div class="weekday-emoji">${
+                      forecastDay.weather[0].icon
+                    }</div>
                   </p>
                 </div>
               </div>
