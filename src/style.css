@@ -10,9 +10,8 @@
 }
 
 .head-emoji {
-  display: block;
-  font-size: 64px;
-  text-align: center;
+display: block;
+margin: 0 auto; 
   color: #ffcf7f;
 }
 .temperature-container {
@@ -115,11 +114,7 @@ h6 {
 .low {
 color: #d1d1d1;
 }
-.weekday-emoji {
-  font-size: 18px;
-  text-align: center;
-  color: #ffcf7f;
-}
+
 .open-source-disclaimer {
   text-align: center;
   display: block;

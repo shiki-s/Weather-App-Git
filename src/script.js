@@ -48,9 +48,15 @@ function displayWeather(response) {
   let descriptionDisplay = document.querySelector(".weather-description");
   descriptionDisplay.innerHTML = weatherDescription;
 
+  let iconElement = document.querySelector(".head-emoji");
+
   let windSpeed = response.data.wind.speed;
   let windSpeedDisplay = document.querySelector(".wind-speed");
   windSpeedDisplay.innerHTML = `Wind speed: ${windSpeed}`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 
   getForecast(response.data.coord);
 }
@@ -76,10 +82,15 @@ function displayForecast(response) {
                     <span class="low">${Math.round(
                       forecastDay.temp.min
                     )}°</span>
+                    <img>
         
-                    <div class="weekday-emoji">${
+                    <img src="http://openweathermap.org/img/wn/${
                       forecastDay.weather[0].icon
-                    }</div>
+                    }@2x.png"/
+                              width="42"
+
+                    >
+                  
                   </p>
                 </div>
               </div>
