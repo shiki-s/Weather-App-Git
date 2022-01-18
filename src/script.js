@@ -64,8 +64,9 @@ function displayWeather(response) {
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector(".weatherForecast");
-  let forecastHTML = `<div class="row">`;
   let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
+
+  let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
       forecastHTML =
@@ -95,11 +96,10 @@ function displayForecast(response) {
                 </div>
               </div>
             </div>`;
-
-      forecastHTML = forecastHTML + `</div>`;
-      forecastElement.innerHTML = forecastHTML;
     }
   });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function showDefaultTemp() {
